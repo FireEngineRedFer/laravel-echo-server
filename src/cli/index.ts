@@ -1,4 +1,5 @@
 import { Cli } from './cli';
+import yargs = require("yargs");
 
 let cli = new Cli();
 

@@ -1,6 +1,7 @@
 import { PresenceChannel } from './presence-channel';
 import { PrivateChannel } from './private-channel';
 import { Log } from './../log';
+import request = require('request');
 
 export class Channel {
     /**
@@ -27,7 +28,7 @@ export class Channel {
      * Create a new channel instance.
      */
     constructor(private io, private options) {
-        this.private = new PrivateChannel(options);
+        this.private = new PrivateChannel(options, request);
         this.presence = new PresenceChannel(io, options);
 
         if (this.options.devMode) {

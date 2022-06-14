@@ -15,7 +15,7 @@ export class Cli {
      * Create new CLI instance.
      */
     constructor() {
-        this.defaultOptions = echo.defaultOptions;
+        this.defaultOptions = EchoServer.defaultOptions;
     }
 
     /**
@@ -91,12 +91,13 @@ export class Cli {
                         process.exit();
                     },
                     error => {
-                        console.error(colors.error(error));
+                        console.error(colors.red(error));
                     }
                 );
             },
             error => console.error(error)
         );
+        return yargs;
     }
 
     /**
