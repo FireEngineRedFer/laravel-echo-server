@@ -96,7 +96,6 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsc -w",
-    "prepublish": "npm run build"
   },
   "version": "1.6.0"
 }
