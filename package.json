@@ -95,7 +95,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "dev": "tsc -w",
+    "dev": "tsc -w"
   },
   "version": "1.6.0"
 }
